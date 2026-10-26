@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel | Admission Records</title><link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/admin.js" defer></script>
+</head>
+<body>
+  <main class="admin-shell">
+    <header class="admin-header">
+      <div><p class="eyebrow">The Master Skills Institute</p><h1>Admission Records</h1><p>Manage and review submitted 2026 applications.</p></div>
+      <a href="/" class="button primary" style="text-decoration:none">Open admission form</a>
+    </header>
+    <section id="loginPanel" class="panel login-panel">
+      <h2>Administrator login</h2><p class="muted">Sign in to view private applicant information.</p>
+      <form id="loginForm">
+        <div class="field"><label for="username">Username</label><input id="username" autocomplete="username" required value="admin"></div>
+        <div class="field"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required></div>
+        <div id="loginMessage" class="message" role="status"></div>
+        <button class="button primary" type="submit">Sign in</button>
+      </form>
+    </section>
+    <section id="recordsPanel" hidden>
+      <div class="panel">
+        <div class="admin-tools">
+          <div class="stat"><small>Total submitted applications</small><strong id="totalCount">0</strong></div>
+          <input class="searchbox" id="searchInput" placeholder="Search name, father name, student ID or mobile…">
+          <button class="button primary" id="refreshButton">Refresh records</button>
+          <button class="small-button" id="logoutButton">Log out</button>
+        </div>
+        <div id="recordsMessage" class="message" role="status"></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Application #</th><th>Applicant</th><th>Father's name</th><th>Mobile</th><th>Course(s)</th><th>Submitted</th><th>Actions</th></tr></thead>
+          <tbody id="recordsBody"><tr><td colspan="7">Loading records…</td></tr></tbody>
+        </table></div>
+      </div>
+    </section>
+    <dialog id="detailDialog" style="border:0;border-radius:12px;padding:24px;width:min(720px,calc(100% - 24px));box-shadow:0 20px 80px #0003">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><h2>Application details</h2><button class="small-button" id="closeDialog">Close</button></div>
+      <div id="detailContent" class="record-detail"></div>
+    </dialog>
+  </main>
+</body>
+</html>

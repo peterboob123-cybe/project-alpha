@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026 Admission Form | The Master Skills Institute</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="form-header">
+      <div class="seal">MSI</div>
+      <p class="eyebrow">The Master Skills Institute Khanpur Campus</p>
+      <h1>2026 Admission Form</h1>
+      <h2>Khanpur College of Technology</h2>
+      <p class="instruction">Please fill in the form in BLOCK LETTERS</p>
+    </header>
+
+    <form id="admissionForm">
+      <section class="section">
+        <div class="field full">
+          <label for="name">Name <span>*</span></label>
+          <input id="name" name="name" required maxlength="150" autocomplete="name">
+        </div>
+        <div class="field full">
+          <label for="father_name">Father's Name <span>*</span></label>
+          <input id="father_name" name="father_name" required maxlength="150">
+        </div>
+        <div class="field">
+          <label for="dob_figure">Date of Birth (in figures) <span>*</span></label>
+          <input id="dob_figure" name="dob_figure" type="date" required>
+        </div>
+        <div class="field">
+          <label for="dob_words">Date of Birth (in words)</label>
+          <input id="dob_words" name="dob_words" placeholder="e.g. 12 January 2008">
+        </div>
+        <div class="field">
+          <label for="admission_date">Date of Admission <span>*</span></label>
+          <input id="admission_date" name="admission_date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="qualification">Qualification <span>*</span></label>
+          <select id="qualification" name="qualification" required>
+            <option value="">Select qualification</option>
+            <option>Science</option><option>Arts</option><option>Computer Science</option>
+            <option>Matric</option><option>Intermediate</option><option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="father_occupation">Father's Occupation / ID #</label>
+          <input id="father_occupation" name="father_occupation">
+        </div>
+        <div class="field">
+          <label for="student_id">Student ID #</label>
+          <input id="student_id" name="student_id">
+        </div>
+        <div class="field full">
+          <label for="address">Address <span>*</span></label>
+          <textarea id="address" name="address" rows="2" required maxlength="500"></textarea>
+        </div>
+        <div class="field">
+          <label for="student_mobile">Student Mobile <span>*</span></label>
+          <input id="student_mobile" name="student_mobile" type="tel" required placeholder="03xx-xxxxxxx">
+        </div>
+        <div class="field">
+          <label for="guardian_mobile">Father's / Guardian Mobile <span>*</span></label>
+          <input id="guardian_mobile" name="guardian_mobile" type="tel" required placeholder="03xx-xxxxxxx">
+        </div>
+      </section>
+
+      <section class="section course-section">
+        <h3>Course Selection</h3>
+        <p class="section-note">Short Courses (Under 03 Months) — Select one</p>
+        <div class="course-grid" id="courses3">
+          <label class="course-option"><input type="radio" name="course_3_months" value="Computer"> Computer (کمپیوٹر)</label>
+          <label class="course-option"><input type="radio" name="course_3_months" value="Crochet Stitch"> Crochet Stitch (کروشیہ)</label>
+          <label class="course-option"><input type="radio" name="course_3_months" value="Tailoring"> Tailoring (سلائی)</label>
+          <label class="course-option"><input type="radio" name="course_3_months" value="Embroidery"> Embroidery (کڑھائی)</label>
+          <label class="course-option"><input type="radio" name="course_3_months" value="Karahi"> Karahi (کڑاہی)</label>
+          <label class="course-option"><input type="radio" name="course_3_months" value="Beautician"> Beautician (بیوٹیشن)</label>
+        </div>
+        <p class="section-note">Short Courses (Under 06 Months) — Select one</p>
+        <div class="course-grid" id="courses6">
+          <label class="course-option"><input type="radio" name="course_6_months" value="Computer"> Computer (کمپیوٹر)</label>
+          <label class="course-option"><input type="radio" name="course_6_months" value="Crochet Stitch"> Crochet Stitch (کروشیہ)</label>
+          <label class="course-option"><input type="radio" name="course_6_months" value="Tailoring"> Tailoring (سلائی)</label>
+          <label class="course-option"><input type="radio" name="course_6_months" value="Embroidery"> Embroidery (کڑھائی)</label>
+          <label class="course-option"><input type="radio" name="course_6_months" value="Karahi"> Karahi (کڑاہی)</label>
+          <label class="course-option"><input type="radio" name="course_6_months" value="Beautician"> Beautician (بیوٹیشن)</label>
+        </div>
+        <p class="hint">Choose at least one course. You may select one course from each duration.</p>
+      </section>
+
+      <section class="declaration">
+        <h3>Other (Please Specify)</h3>
+        <input id="other_course" aria-label="Other course specification" placeholder="If selecting Other, write the course here">
+        <h3>Declaration</h3>
+        <p>I certify that the above information is correct and have compared all information in the form. I agree to abide by the rules and regulations of the institute.</p>
+        <label class="declaration-check"><input type="checkbox" name="declaration" id="declaration" required> I confirm the information provided is correct. <span>*</span></label>
+      </section>
+
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+      <div class="submit-row">
+        <p>Fields marked * are required.</p>
+        <button class="button primary" type="submit" id="submitButton">Submit Admission Form</button>
+      </div>
+    </form>
+    <footer>© 2026 The Master Skills Institute Khanpur Campus <a href="/admin">Admin panel</a></footer>
+  </main>
+</body>
+</html>

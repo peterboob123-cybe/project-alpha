@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+:root{--ink:#182638;--muted:#66758a;--line:#d8e0e8;--brand:#174b73;--brand2:#236b8e;--paper:#fff;--bg:#edf2f6;--accent:#b88a42}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;font-size:14px;line-height:1.5}
+.page-shell{width:min(900px,calc(100% - 28px));margin:32px auto;background:var(--paper);border:1px solid #dbe2e9;border-radius:14px;box-shadow:0 16px 55px #18314b14;overflow:hidden}
+.form-header{text-align:center;padding:30px 36px 24px;background:linear-gradient(145deg,#fff,#f5f8fb);border-bottom:1px solid var(--line);position:relative}
+.seal{display:grid;place-items:center;width:48px;height:48px;border:2px solid var(--accent);border-radius:50%;color:var(--brand);font-weight:700;margin:0 auto 10px;letter-spacing:1px}
+.eyebrow{margin:0;color:var(--brand);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(28px,4vw,38px);line-height:1.15;margin:7px 0;color:#142c43}
+.form-header h2{font-size:16px;margin:7px 0 18px;font-weight:600;color:#43546a}
+.instruction{display:inline-block;margin:0;background:#e8f0f6;color:var(--brand);padding:7px 14px;border-radius:30px;font-size:12px;font-weight:700}
+form{padding:28px 36px 20px}.section{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px}.field{min-width:0;display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}
+label{font-weight:600;font-size:12px;color:#3b4d60}.field label span,.declaration-check span{color:#b23a35}
+input,select,textarea{font:inherit;color:var(--ink);background:#fff;border:1px solid #cbd6e1;border-radius:7px;padding:11px 12px;min-width:0;width:100%;outline:none;transition:border .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{border-color:var(--brand2);box-shadow:0 0 0 3px #236b8e18}textarea{resize:vertical}
+.course-section{display:block;margin-top:28px;padding:20px;border:1px solid var(--line);border-radius:10px;background:#fbfcfd}
+h3{font-size:13px;text-transform:uppercase;letter-spacing:.055em;color:var(--brand);margin:0 0 12px}
+.section-note{font-size:13px;font-weight:700;margin:16px 0 10px}.course-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.course-option{display:flex;align-items:center;gap:8px;padding:10px;border:1px solid var(--line);border-radius:7px;background:white;font-size:12px;font-weight:500;cursor:pointer}
+.course-option:has(input:checked){border-color:var(--brand2);background:#eef6fa}.course-option input{width:15px;height:15px;margin:0;accent-color:var(--brand);flex:0 0 auto}
+.hint{font-size:12px;color:var(--muted);margin:12px 0 0}
+.declaration{margin-top:24px;border-top:1px solid var(--line);padding-top:20px}.declaration>input{margin-bottom:20px}.declaration p{font-size:12px;color:#526276;margin:0 0 14px}.declaration-check{display:flex;align-items:flex-start;gap:9px;font-size:12px}.declaration-check input{width:16px;height:16px;margin:2px 0 0;accent-color:var(--brand)}
+.submit-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:24px}.submit-row p{font-size:12px;color:var(--muted)}
+.button{border:0;border-radius:8px;padding:12px 18px;font:inherit;font-weight:700;cursor:pointer}.primary{background:var(--brand);color:white}.primary:hover{background:#103b5c}.primary:disabled{opacity:.6;cursor:wait}
+.message{display:none;padding:12px 14px;border-radius:8px;margin-top:16px;font-size:13px}.message.success{display:block;background:#e8f6ee;color:#17663c}.message.error{display:block;background:#fff0ef;color:#9b2e28}
+footer{display:flex;justify-content:space-between;gap:16px;padding:18px 36px;background:#f7f9fb;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}footer a{color:var(--brand);font-weight:700}
+.admin-shell{width:min(1200px,calc(100% - 28px));margin:32px auto}.admin-header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}.admin-header h1{font-size:30px;margin:0}.admin-header p{margin:5px 0;color:var(--muted)}
+.panel{background:white;border:1px solid var(--line);border-radius:12px;padding:22px;box-shadow:0 10px 35px #18314b0b}.login-panel{max-width:430px;margin:70px auto}.login-panel h2{margin-top:0}.login-panel .field{margin:14px 0}
+.admin-tools{display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap;margin:18px 0}.searchbox{max-width:420px;flex:1}.stat{background:#edf5f9;padding:16px 18px;border-radius:10px;min-width:180px}.stat small{display:block;color:var(--muted)}.stat strong{font-size:28px;color:var(--brand)}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:8px}table{width:100%;border-collapse:collapse;min-width:760px;background:white}th,td{text-align:left;padding:12px 14px;border-bottom:1px solid #e8edf2;font-size:12px;vertical-align:top}th{background:#f5f8fa;color:#43546a;font-size:11px;text-transform:uppercase;letter-spacing:.04em}tr:last-child td{border-bottom:0}.record-actions{display:flex;gap:6px}.small-button{padding:7px 9px;border:1px solid var(--line);background:white;border-radius:6px;cursor:pointer;font:inherit}.danger{color:#a62c2c}.muted{color:var(--muted)}.record-detail{display:grid;grid-template-columns:1fr 1fr;gap:14px}.detail-item{padding-bottom:10px;border-bottom:1px solid var(--line)}.detail-item small{display:block;color:var(--muted);margin-bottom:4px}.detail-item strong{overflow-wrap:anywhere}
+@media(max-width:640px){.page-shell{margin:12px auto;width:calc(100% - 16px)}.form-header{padding:24px 18px 20px}form{padding:22px 18px}.section{grid-template-columns:1fr;gap:14px}.field.full{grid-column:auto}.course-grid{grid-template-columns:1fr 1fr}.course-section{padding:14px}.submit-row{align-items:stretch;flex-direction:column}.submit-row .button{width:100%}footer{padding:16px 18px;flex-direction:column}.admin-header{align-items:flex-start;flex-direction:column}.record-detail{grid-template-columns:1fr}}
